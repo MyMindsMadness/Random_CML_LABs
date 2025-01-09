@@ -1,0 +1,399 @@
+annotations:
+  - border_color: '#568DEE'
+    border_radius: 0
+    border_style: 4,2
+    color: '#568DEE'
+    rotation: 0
+    thickness: 1
+    type: rectangle
+    x1: -840.0
+    y1: -120.0
+    x2: 360.0
+    y2: 160.0
+    z_index: 0
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#FFFFFF'
+    rotation: 0
+    text_bold: false
+    text_content: Connection to PC
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -720.0
+    y1: -80.0
+    z_index: 1
+  - border_color: '#15CA2B'
+    border_radius: 0
+    border_style: ''
+    color: '#15CA2B'
+    rotation: 0
+    thickness: 1
+    type: rectangle
+    x1: -440.0
+    y1: -240.0
+    x2: 320.0
+    y2: 400.0
+    z_index: 2
+  - border_color: '#00000000'
+    border_style: ''
+    color: '#FFFFFF'
+    rotation: 0
+    text_bold: false
+    text_content: |-
+      Devices to be configured
+      programatically
+    text_font: monospace
+    text_italic: false
+    text_size: 12
+    text_unit: pt
+    thickness: 1
+    type: text
+    x1: -360.0
+    y1: -200.0
+    z_index: 3
+smart_annotations: []
+nodes:
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname SW1
+          ip domain name mymindsmadness.com
+          username mccube priv 15 secret madness
+          crypto key gen rsa mod 2048
+          line vty 0 4
+           transport input ssh
+           login local
+          int g0/0
+           no switchport
+           ip address 192.168.142.11 255.255.255.0
+           no shut
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n0
+    image_definition: null
+    label: iosvl2-0
+    node_definition: iosvl2
+    parameters: {}
+    ram: null
+    tags: []
+    x: -360
+    y: -120
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        mac_address: null
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        mac_address: null
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        mac_address: null
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        mac_address: null
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname SW2
+          ip domain name mymindsmadness.com
+          username mccube priv 15 secret madness
+          crypto key gen rsa mod 2048
+          line vty 0 4
+           transport input ssh
+           login local
+          int g0/0
+          no switchport
+           ip address 192.168.142.12 255.255.255.0
+           no shut
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n1
+    image_definition: null
+    label: iosvl2-1
+    node_definition: iosvl2
+    parameters: {}
+    ram: null
+    tags: []
+    x: -360
+    y: 40
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        mac_address: null
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        mac_address: null
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        mac_address: null
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        mac_address: null
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname SW3
+          ip domain name mymindsmadness.com
+          username mccube priv 15 secret madness
+          crypto key gen rsa mod 2048
+          line vty 0 4
+           transport input ssh
+           login local
+          int g0/0
+          no switchport
+           ip address 192.168.142.13 255.255.255.0
+           no shut
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n2
+    image_definition: null
+    label: iosvl2-2
+    node_definition: iosvl2
+    parameters: {}
+    ram: null
+    tags: []
+    x: -200
+    y: -120
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        mac_address: null
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        mac_address: null
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        mac_address: null
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        mac_address: null
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          hostname SW4
+          ip domain name mymindsmadness.com
+          username mccube priv 15 secret madness
+          crypto key gen rsa mod 2048
+          line vty 0 4
+           transport input ssh
+           login local
+          int g0/0
+           no switchport
+           ip address 192.168.142.14 255.255.255.0
+           no shut
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n3
+    image_definition: null
+    label: iosvl2-3
+    node_definition: iosvl2
+    parameters: {}
+    ram: null
+    tags: []
+    x: -200
+    y: 40
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        mac_address: null
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        mac_address: null
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        mac_address: null
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        mac_address: null
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration: []
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n4
+    image_definition: null
+    label: unmanaged-switch-0
+    node_definition: unmanaged_switch
+    parameters: {}
+    ram: null
+    tags: []
+    x: -560
+    y: -40
+    interfaces:
+      - id: i0
+        label: port0
+        mac_address: null
+        slot: 0
+        type: physical
+      - id: i1
+        label: port1
+        mac_address: null
+        slot: 1
+        type: physical
+      - id: i2
+        label: port2
+        mac_address: null
+        slot: 2
+        type: physical
+      - id: i3
+        label: port3
+        mac_address: null
+        slot: 3
+        type: physical
+      - id: i4
+        label: port4
+        mac_address: null
+        slot: 4
+        type: physical
+      - id: i5
+        label: port5
+        mac_address: null
+        slot: 5
+        type: physical
+      - id: i6
+        label: port6
+        mac_address: null
+        slot: 6
+        type: physical
+      - id: i7
+        label: port7
+        mac_address: null
+        slot: 7
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: default
+        content: System Bridge
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n5
+    image_definition: null
+    label: ext-conn-0
+    node_definition: external_connector
+    parameters: {}
+    ram: null
+    tags: []
+    x: -760
+    y: -40
+    interfaces:
+      - id: i0
+        label: port
+        mac_address: null
+        slot: 0
+        type: physical
+links:
+  - id: l0
+    n1: n4
+    n2: n0
+    i1: i0
+    i2: i1
+    conditioning: {}
+    label: unmanaged-switch-0-port0<->iosvl2-0-GigabitEthernet0/0
+  - id: l1
+    n1: n4
+    n2: n2
+    i1: i1
+    i2: i1
+    conditioning: {}
+    label: unmanaged-switch-0-port1<->iosvl2-2-GigabitEthernet0/0
+  - id: l2
+    n1: n4
+    n2: n1
+    i1: i2
+    i2: i1
+    conditioning: {}
+    label: unmanaged-switch-0-port2<->iosvl2-1-GigabitEthernet0/0
+  - id: l3
+    n1: n4
+    n2: n3
+    i1: i3
+    i2: i1
+    conditioning: {}
+    label: unmanaged-switch-0-port3<->iosvl2-3-GigabitEthernet0/0
+  - id: l4
+    n1: n5
+    n2: n4
+    i1: i0
+    i2: i4
+    conditioning: {}
+    label: ext-conn-0-port<->unmanaged-switch-0-port4
+lab:
+  description: ''
+  notes: ''
+  title: SNMP-Push
+  version: 0.3.0
